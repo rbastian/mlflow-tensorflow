@@ -1,0 +1,9 @@
+name: mlflow-tensorflow
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - conda:
+    - mlflow
+    - tensorflow==2.8.1
