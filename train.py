@@ -5,7 +5,7 @@ import mlflow
 import mlflow.tensorflow
 
 # Enable auto-logging to MLflow to capture TensorBoard metrics.
-mlflow.tensorflow.autolog()
+mlflow.tensorflow.autolog(registered_model_name="TensorflowGoogleTutorial")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--epochs", default=5, type=int, help="epochs")
@@ -25,7 +25,7 @@ def main(argv):
             tf.keras.layers.Dropout(0.2),
             tf.keras.layers.Dense(10)
         ])
-
+       
         loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 
         model.compile(optimizer='adam', loss=loss_fn, metrics=['accuracy'])
