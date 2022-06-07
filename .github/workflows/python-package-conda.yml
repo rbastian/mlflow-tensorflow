@@ -25,3 +25,6 @@ jobs:
         channel-priority: strict
         environment-file: conda.yaml
         use-only-tar-bz2: true # IMPORTANT: This needs to be set for caching to work properly!
+    - name: MLFlow Training
+      run: |
+        mlflow run --experiment-name /Users/robert.bastian@enverus.com/mlflow-tensorflow-gha .
