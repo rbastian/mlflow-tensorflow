@@ -25,7 +25,7 @@ jobs:
         channel-priority: strict
         environment-file: conda.yaml
         use-only-tar-bz2: true # IMPORTANT: This needs to be set for caching to work properly!
-    - name: Bash
+    - name: Training
       shell: bash -l {0}
       run: |
           conda info
